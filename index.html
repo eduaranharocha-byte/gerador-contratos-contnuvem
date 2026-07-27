@@ -277,6 +277,105 @@
   .login-box .field{text-align:left;margin-bottom:14px;}
   .login-erro{color:var(--red);font-size:12.5px;margin-top:12px;min-height:14px;font-weight:600;}
   .login-hidden{display:none !important;}
+
+  /* ============================================================
+     RESPONSIVO — CELULAR E TABLET
+     ============================================================ */
+
+  /* Tablet (até 900px): topbar mais compacta, botões podem quebrar linha */
+  @media (max-width:900px){
+    .topbar{flex-wrap:wrap;row-gap:10px;padding:14px 16px;}
+    .topbar .subtitle{display:none;}
+    .shell{padding:20px 14px 60px;}
+    .card{padding:20px;}
+    .paper{padding:40px 34px 50px;}
+  }
+
+  /* Celular (até 640px) */
+  @media (max-width:640px){
+    body{font-size:14px;}
+    .topbar{padding:12px 12px;gap:8px;}
+    .topbar img{height:24px;}
+    .topbar .divider{display:none;}
+    .topbar .title{font-size:13.5px;}
+    .btn-sm{padding:7px 10px;font-size:12px;}
+    .badge-online{font-size:11px;padding:4px 8px;}
+
+    .shell{padding:14px 10px 50px;}
+    .card{padding:16px;border-radius:12px;}
+    .panel-head h2{font-size:17px;}
+    .panel-head p{font-size:12.5px;}
+
+    /* Stepper: pílulas menores, quebram em várias linhas */
+    .stepper{gap:6px;margin-bottom:18px;}
+    .step-pill{padding:7px 12px 7px 7px;font-size:11.5px;gap:6px;}
+    .step-pill .num{width:20px;height:20px;font-size:11px;}
+    .step-connector{display:none;}
+
+    /* Cards de tipo de contrato: ícone e texto menores */
+    .tipo-card{padding:16px;}
+    .tipo-card h3{font-size:14.5px;}
+    .tipo-card p{font-size:12px;}
+
+    /* Formulários: todos os campos em coluna única */
+    .grid{gap:12px;}
+    .col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8{grid-column:span 12;}
+
+    /* Busca de CNPJ/CEP: empilha input e botão */
+    .lookup-row{flex-wrap:wrap;}
+    .lookup-row .field{flex:1 1 100%;}
+    .lookup-row .btn{width:100%;}
+
+    /* Segmentado PJ/PF ocupa a largura toda */
+    .segmented{width:100%;}
+    .segmented button{flex:1;padding:9px 8px;font-size:12.5px;}
+
+    /* Busca de cliente salvo: empilha select e botões */
+    .cliente-busca-box{padding:14px;}
+    .cliente-busca-box .row{flex-direction:column;align-items:stretch;}
+    .cliente-busca-box .row .btn{width:100%;}
+
+    /* Botões de navegação entre etapas: empilhados, largura total */
+    .nav-row{flex-direction:column-reverse;gap:10px;align-items:stretch;}
+    .nav-row .btn{width:100%;justify-content:center;}
+
+    /* Cláusulas adicionais */
+    .extra-item{padding:13px;}
+
+    /* Config da contratada */
+    .config-body{padding:14px;}
+
+    /* Preview / contrato: reduz margens da folha para caber na tela,
+       sem afetar a impressão (a regra @media print sobrescreve isso) */
+    .preview-toolbar{gap:8px;}
+    .preview-toolbar .btn{flex:1 1 auto;font-size:12px;padding:9px 10px;}
+    .paper-wrap{padding:16px 0;border-radius:10px;}
+    .paper{padding:26px 16px 34px;font-size:12.3px;}
+    .paper .letterhead{flex-direction:column;gap:10px;}
+    .paper .letterhead .meta{text-align:left;}
+    .paper h1.doctitle{font-size:13px;}
+    .paper .sign-pair{flex-direction:column;gap:26px;}
+    .paper .sign-line{width:100%;}
+
+    /* Modal de histórico: quase tela cheia, botões empilhados */
+    .modal-overlay{padding:0;align-items:stretch;}
+    .modal-box{max-width:100%;height:100%;max-height:100%;border-radius:0;padding:16px;}
+    .backup-row{flex-direction:column;align-items:stretch;}
+    .backup-row .btn{width:100%;}
+    .hist-item{flex-wrap:wrap;gap:8px;}
+    .hist-actions{width:100%;justify-content:flex-end;}
+
+    /* Login */
+    .login-box{padding:30px 22px 24px;border-radius:14px;}
+    .login-overlay{padding:14px;}
+  }
+
+  /* Telas bem pequenas (celulares estreitos) */
+  @media (max-width:380px){
+    .step-pill span, .step-pill{font-size:11px;}
+    .topbar .title{font-size:12.5px;}
+    .btn{font-size:12.5px;padding:9px 12px;}
+  }
 </style>
 </head>
 <body>
